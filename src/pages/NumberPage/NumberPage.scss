@@ -1,0 +1,52 @@
+.number-page {
+    background-image: url("../../images/number-page.png");
+
+    &__content {
+        width: 27.2rem;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 2.6rem;
+        line-height: 3.047rem;
+        color: #000;
+        text-align: center;
+    }
+
+    &__phone {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 3.75rem;
+        color: #000;
+        text-align: center;
+        letter-spacing: 0.3rem;
+        margin-top: 1.3rem;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.641em;
+        color: #000;
+        text-align: center;
+        margin: 1.3rem 0 2rem;
+    }
+
+    &__btn {
+        width: 100%;
+        height: 5.2rem;
+        border: .1rem solid #4E4E4E;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #4E4E4E;
+        transition: all 0.2s ease-in-out;
+        margin-top: 1.3rem;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+            border: none;
+        }
+    }
+}

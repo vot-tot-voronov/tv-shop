@@ -2,6 +2,10 @@
 @import '../../scss/mixins';
 @import '../../scss/btn';
 @import '../../pages/BannerPage/BannerPage.scss';
+@import '../../pages/NumberPage/NumberPage.scss';
+@import '../../scss/container16_9';
+@import '../LeftBlock/LeftBlock.scss';
+@import '../KeyBoard/KeyBoard.scss';
 
 *,
 *::after,
@@ -18,4 +22,14 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
 }

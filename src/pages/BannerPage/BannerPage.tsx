@@ -1,20 +1,23 @@
 import React from 'react'
 import QrCode from '../../components/QrCode/QrCode'
+import {Link} from 'react-router-dom'
 
 const BannerPage: React.FC = () => {
     return (
-        <div className="container">
-            <div className="video-banner">
-                <p className="video-banner__title">
+        <div className="video-page container">
+            <div className="video-page__banner">
+                <p className="video-page__title">
                     ИСПОЛНИТЕ МЕЧТУ ВАШЕГО МАЛЫША! <br></br> ПОДАРИТЕ ЕМУ СОБАКУ!
                 </p>
-                <div className="video-banner__qrcode">
+                <div className="video-page__qrcode">
                     <QrCode />
                 </div>
-                <p className="video-banner__scanQr">
+                <p className="video-page__scanQr">
                     Сканируйте QR-код или нажмите ОК
                 </p>
-                <button className="btn video-banner__btn">OK</button>
+                <Link to="/credential">
+                    <button className="btn video-page__btn">OK</button>
+                </Link>
             </div>
         </div>
     )

@@ -1,24 +1,17 @@
-.container {
-    position: relative;
-    //padding-top: 56.25%;
-    aspect-ratio: 16 / 9;
+.video-page {
     background-image: url("../../images/video.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    overflow: hidden;
-}
 
-.video-banner {
-
-    position: absolute;
-    top: 33%;
-    right: 0;
-    width: 25.1rem;
-    height: 35.7rem;
-    background-color: #86D3F4;
-    padding: 3rem 1rem 1rem;
-    text-align: center;
+    &__banner {
+        position: absolute;
+        top: 30%;
+        right: 0;
+        animation: showBanner 1.5s ease-in-out;
+        width: 25.1rem;
+        height: 35.7rem;
+        background-color: #86D3F4;
+        padding: 3rem 1rem 1rem;
+        text-align: center;
+    }
 
     &__title {
         font-weight: 500;
@@ -45,5 +38,18 @@
         background-color: #000;
         color: #86D3F4;
         margin: 1.3rem auto 0;
+    }
+}
+
+
+@keyframes showBanner {
+    from {
+        top: 30%;
+        right: -100%;
+    }
+
+    to {
+        top: 30%;
+        right: 0;
     }
 }
