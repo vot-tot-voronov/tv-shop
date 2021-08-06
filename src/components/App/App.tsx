@@ -32,10 +32,6 @@ const App: React.FC = () => {
           </Switch>
           </CSSTransition>
         </TransitionGroup>
-        {/* <Switch>
-          <Route path="/" exact component={BannerPage} />
-          <Route path="/credential" component={NumberPage} />
-        </Switch> */}
     </>
   )
 }

@@ -38,6 +38,11 @@
         background-color: #000;
         color: #86D3F4;
         margin: 1.3rem auto 0;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background-color: rgb(20, 20, 20);
+        }
     }
 }
 

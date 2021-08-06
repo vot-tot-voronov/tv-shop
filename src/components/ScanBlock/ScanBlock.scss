@@ -1,0 +1,15 @@
+.scan-block {
+    display: flex;
+    align-items: center;
+    width: 31.4rem;
+
+    &__text {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        text-transform: uppercase;
+        margin-right: 1rem;
+        color: #fff;
+        text-align: right;
+    }
+}
