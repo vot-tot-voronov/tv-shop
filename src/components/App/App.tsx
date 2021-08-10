@@ -11,11 +11,13 @@ import {
   TransitionGroup,
   CSSTransition
 } from "react-transition-group";
+import { DataProvider } from '../DataContext/DataContext';
 
 const App: React.FC = () => {
   let location = useLocation()
   return (
-    <>
+    <> 
+      <DataProvider>
         <TransitionGroup>
           <CSSTransition
             key={location.key}
@@ -32,6 +34,7 @@ const App: React.FC = () => {
           </Switch>
           </CSSTransition>
         </TransitionGroup>
+      </DataProvider>
     </>
   )
 }
