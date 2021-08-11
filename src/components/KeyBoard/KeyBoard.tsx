@@ -6,9 +6,8 @@ import { useData } from '../DataContext/DataContext';
 const KeyBoard: React.FC = () => {
     const [phNumber, setPhNumber] = useState<number[]>([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]);
     const {setValues} = useData();
-
     useEffect(() => {
-        setValues?.(phNumber)
+        setValues(phNumber)
     }, [phNumber, setValues]);
 
     const [active, setActive] = useState<number>(4);

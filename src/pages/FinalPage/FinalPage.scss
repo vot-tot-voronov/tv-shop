@@ -1,0 +1,33 @@
+.final-page {
+    background-image: url("../../images/number-page.png");
+
+    &__title {
+        font-weight: 700;
+        font-size: 4.2rem;
+        line-height: 3.75rem;
+        color: #000;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.641em;
+        color: #000;
+        text-align: center;
+    }
+
+    &__back {
+        position: absolute;
+        display: inline-block;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    &__scanQr {
+        position: absolute;
+        bottom: 4rem;
+        right: 4rem;
+    }
+}

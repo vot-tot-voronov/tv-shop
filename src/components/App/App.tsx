@@ -12,6 +12,7 @@ import {
   CSSTransition
 } from "react-transition-group";
 import { DataProvider } from '../DataContext/DataContext';
+import FinalPage from '../../pages/FinalPage/FinalPage';
 
 const App: React.FC = () => {
   let location = useLocation()
@@ -30,6 +31,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/credential">
               <NumberPage />
+            </Route>
+            <Route path="/final-page">
+              <FinalPage />
             </Route>
           </Switch>
           </CSSTransition>
