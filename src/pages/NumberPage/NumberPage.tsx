@@ -5,9 +5,11 @@ import LeftBlock from '../../components/LeftBlock/LeftBlock'
 import {Link} from 'react-router-dom'
 import ScanBlock from '../../components/ScanBlock/ScanBlock'
 import { useData } from '../../components/DataContext/DataContext'
+import { ConditionalLink } from './components/ConditionalLink'
 
 const NumberPage: React.FC = () => {
     const [checked, setChecked] = useState<boolean>(false);
+    const [correctPhone, setCorrectPhone] = useState<boolean>(true);
     const {data} = useData();
     const phoneNumberArray: string[] = Array.from(data).map(item => {
         if (item === -1) {
@@ -30,25 +32,34 @@ const NumberPage: React.FC = () => {
                     и с Вами свяжется наш менеждер для дальнейшей консультации
                 </p>
                 <KeyBoard />
-                <div className="number-page__check">
-                    <input 
-                        type="checkbox" 
-                        id="number-page__id" 
-                        className="number-page__checkbox" 
-                        name="agree"
-                        onChange={() => setChecked(prevState => !prevState)}
-                        checked={checked} 
+                {correctPhone ? 
+                     <div className="number-page__check">
+                        <input 
+                            type="checkbox" 
+                            id="number-page__id" 
+                            className="number-page__checkbox" 
+                            name="agree"
+                            onChange={() => setChecked(prevState => !prevState)}
+                            checked={checked} 
+                        />
+                        <label htmlFor="number-page__id">Согласие на обработку персональных данных</label>
+                    </div> :
+                    <p className="number-page__error">Неверно введённый номер</p>
+                }
+                {
+                    checked ? 
+                    <ConditionalLink 
+                        correctPhone={phoneNumberArray.includes('_')} 
+                        setCorrectPhone={setCorrectPhone} 
+                        path="/final-page"
                     />
-                    <label htmlFor="number-page__id">Согласие на обработку персональных данных</label>
-                </div>
-                <Link to="/final-page">
+                    : 
                     <button 
-                        className={`btn number-page__btn 
-                        ${checked ? 'number-page__btn--enabled' : 'number-page__btn--disabled'}`}
+                        className={`btn number-page__btn number-page__btn--disabled`}
                     >
                         Подтвердить номер
                     </button>
-                </Link>
+                }
             </LeftBlock>
             <div className="number-page__back"><Link to="/"><BackBtn /></Link></div>
             <div className="number-page__scanQr"><ScanBlock /></div>

@@ -107,6 +107,13 @@
         }
     }
 
+    &__error {
+        text-align: center;
+        margin: 3rem 0;
+        font-size: 1.8rem;
+        color: #ff0000;
+    }
+
     &__back {
         position: absolute;
         display: inline-block;
